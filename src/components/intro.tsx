@@ -16,7 +16,7 @@ const Intro = () => {
         <h1 className="text-3xl">RIDWAN ADEBOSIN</h1>
         <div className="pb-4">
           <p className="pb-2 text-xl">Frontend Developer</p>
-          <p className="grid gap-3">
+          <section className="grid gap-3">
             <p className="leading-1">
               Utilizing HTML, CSS, JavaScript, React, and TypeScript, along with
               proficient use of GitHub, I craft not just apps, but
@@ -32,7 +32,7 @@ const Intro = () => {
               fixing, testing, and crafting human-centered applications to
               tackle real-world issues.
             </p>
-          </p>
+          </section>
         </div>
         <div className="flex gap-4">
           <div>

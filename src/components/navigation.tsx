@@ -1,25 +1,11 @@
 import { Sun, Moon } from "lucide-react";
-import { useEffect } from "react";
 
-const Navigation = ({ darkMode, setDarkMode }) => {
-  useEffect(() => {
-    let savedMode = localStorage.getItem("displayMode");
-    if (!savedMode) {
-      savedMode = "light";
-      setDarkMode(false);
-      localStorage.setItem("displayMode", savedMode);
-    }
-    setDarkMode(savedMode === "dark" ? true : false);
-  }, []);
-
-  const toggleDisplayMode = () => {
-    setDarkMode(!darkMode);
-  };
+const Navigation = ({ darkMode, onToggleDisplayMode }) => {
   return (
     <header className="fixed flex align-baseline z-10 justify-between">
       <div></div>
       <nav>
-        <ul className="flex gap-5 border rounded-3xl py-2 px-4 bg-blur">
+        <ul className="flex gap-5 border rounded-3xl py-2 px-4 bg-black">
           <li>
             <a href="skills">Skills</a>
           </li>
@@ -37,7 +23,7 @@ const Navigation = ({ darkMode, setDarkMode }) => {
       <button
         className="float-end"
         onClick={() => {
-          toggleDisplayMode();
+          onToggleDisplayMode();
         }}
       >
         {darkMode ? <Sun /> : <Moon />}
